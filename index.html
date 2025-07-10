@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>MIND STUDIO</title>
+
+    <!-- Bebas Neue (boutons principaux) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- DIN 2014 Regular (email) -->
+    <link href="https://fonts.cdnfonts.com/css/din-2014" rel="stylesheet" />
+
+    <script>
+      window.addEventListener("load", () => {
+        if (
+          window.location.hash === "#english" ||
+          window.location.hash === "#french"
+        ) {
+          history.replaceState(null, null, " ");
+        }
+      });
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      img {
+        display: block;
+        margin: 20px auto;
+        width: 70%;
+      }
+
+      .button-container {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 600px;
+        flex-wrap: wrap;
+        row-gap: 20px;
+      }
+
+      .download-link,
+      .english-link,
+      .french-link,
+      .top-link,
+      .site-link {
+        font-family: "Bebas Neue", sans-serif;
+        color: white;
+        text-decoration: none;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 15px 30px;
+        border: 2px solid white;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .download-link:hover,
+      .english-link:hover,
+      .french-link:hover,
+      .top-link:hover,
+      .site-link:hover {
+        background-color: white;
+        color: black;
+        transform: scale(1.05);
+      }
+
+      .image-wrapper {
+        position: relative;
+        width: 70%;
+        margin: 0px auto;
+      }
+
+      .image-wrapper img {
+        width: 100%;
+        display: block;
+      }
+
+      .french-button-top {
+        position: absolute;
+        top: 50px;
+        right: 78px;
+        z-index: 2;
+      }
+
+      .email-link {
+        position: absolute;
+        bottom: 400px;
+        left: 62.6%;
+        transform: translateX(-50%);
+        font-family: 'DIN 2014', sans-serif;
+        color: white;
+        font-size: 1.6rem;
+        text-decoration: none;
+        background-color: rgb(0, 0, 0);
+        padding: 8px 16px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .email-link:hover {
+        background-color: white;
+        color: black;
+      }
+
+      .bottom-buttons {
+        position: relative;
+        bottom: 85px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        gap: 750px;
+        z-index: 9999;
+        background: transparent;
+        margin: 0;
+        padding: 0;
+      }
+
+      .bottom-buttons a {
+        white-space: nowrap;
+        min-width: 150px;
+        text-align: center;
+      }
+
+      .email-french {
+      bottom: 320px; /* ou 350px, selon ce que tu veux — plus petit = plus bas */
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Boutons principaux -->
+    <div class="button-container">
+      <a class="download-link" href="MIND_studio.pdf" download>
+        Télécharger le PDF complet
+      </a>
+      <a class="english-link" href="#english">English version</a>
+    </div>
+
+    <!-- Image 1 (français) -->
+<div class="image-wrapper" id="french">
+  <a
+    class="email-link email-french"
+    href="mailto:contact@mindparis.com"
+    >contact@mindparis.com</a
+  >
+  <img src="BROCHURE_MIND_Page_2.jpg" alt="Page 1" />
+</div>
+
+
+    <!-- Image 2 (anglais) -->
+    <div class="image-wrapper" id="english">
+      <a class="french-link french-button-top" href="#french">French version</a>
+      <a
+        class="email-link"
+        href="mailto:contact@mindparis.com"
+        >contact@mindparis.com</a
+      >
+      <img src="BROCHURE_MIND_Page_1.jpg" alt="Page 2" />
+    </div>
+
+    <!-- Boutons en bas de page -->
+    <div class="bottom-buttons">
+      <a
+        class="top-link"
+        href="#"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;"
+        >Haut de page</a
+      >
+      <a
+        class="site-link"
+        href="https://mindparis.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        >mindparis.com</a
+      >
+    </div>
+  </body>
+</html>
